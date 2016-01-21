@@ -1,5 +1,6 @@
 <?php
 echo 'change1';
+echo 'change2';
 /**
  * Magento
  *
