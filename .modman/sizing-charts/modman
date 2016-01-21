@@ -1,0 +1,5 @@
+app/code/local/YK/AwesomeSizingChart app/code/local/YK/AwesomeSizingChart
+app/etc/modules/YK_AwesomeSizingCharts.xml app/etc/modules/YK_AwesomeSizingCharts.xml
+
+app/design/adminhtml/default/default/layout/yk app/design/adminhtml/default/default/layout/yk
+app/design/frontend/default/default/template/catalog/product/view.phtml app/design/frontend/default/default/template/catalog/product/view.phtml

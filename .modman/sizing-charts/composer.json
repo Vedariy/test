@@ -1,0 +1,30 @@
+{
+    "name":"snowcommerce/sizing-charts",
+    "type":"magento-module",
+    "homepage":"https://snow-commerce.git.beanstalkapp.com/sizing-charts.git",
+    "description":"Sizing Charts Magento extension",
+    "minimum-stability": "dev",
+    "authors":[
+        {
+            "name":"Yaroslav Kravchuk",
+            "email":"yaroslav.kravchuk@snowcommerce.com"
+        }
+    ],
+    "require":{
+        "magento-hackathon/magento-composer-installer":"*"
+    },
+    "extra": {
+        "map": [
+            ["app/code/local/YK/AwesomeSizingChart", "app/code/local/YK/AwesomeSizingChart"],
+            ["app/design/adminhtml/default/default/layout/yk", "app/design/adminhtml/default/default/layout/yk"],
+            ["app/design/frontend/base/default/layout/yk/sizing_chart.xml", "app/design/frontend/base/default/layout/yk/sizing_chart.xml"],
+            ["app/design/frontend/rwd/default/layout/yk/sizing_chart.xml", "app/design/frontend/rwd/default/layout/yk/sizing_chart.xml"],
+            ["app/design/frontend/base/default/template/sizing_chart", "app/design/frontend/base/default/template/sizing_chart"],
+            ["app/design/frontend/rwd/default/template/sizing_chart", "app/design/frontend/rwd/default/template/sizing_chart"],
+            ["skin/frontend/base/default/sizing_chart", "skin/frontend/base/default/sizing_chart"],
+            ["skin/frontend/rwd/default/sizing_chart", "skin/frontend/rwd/default/sizing_chart"],
+            ["app/etc/modules/YK_AwesomeSizingCharts.xml", "app/etc/modules/YK_AwesomeSizingCharts.xml"]
+        ],
+        "auto-append-gitignore": true
+    }
+}

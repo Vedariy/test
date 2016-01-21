@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+<menu>
+    <cms>
+        <children>
+            <block translate="title" module="cms">
+                <depends><module>HideMe</module></depends>
+            </block>
+            <blockmanagement>
+                <title>CMS Block Management</title>
+                <sort_order>2</sort_order>
+                <children>
+                    <block translate="title" module="cms">
+                        <title>Static Blocks</title>
+                        <action>adminhtml/cms_block</action>
+                        <sort_order>10</sort_order>
+                    </block>
+                    <labels translate="title" module="sc_cmsblockmanagement">
+                        <title>Block Labels</title>
+                        <sort_order>11</sort_order>
+                        <action>adminhtml/label/index</action>
+                    </labels>
+                    <importexport translate="title" module="sc_cmsblockmanagement">
+                        <title>Import / Export</title>
+                        <sort_order>12</sort_order>
+                        <action>adminhtml/importexport/index</action>
+                    </importexport>
+                </children>
+            </blockmanagement>
+        </children>
+    </cms>
+</menu>
+</config>

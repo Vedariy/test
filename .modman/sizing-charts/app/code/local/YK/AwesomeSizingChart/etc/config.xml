@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * YK extension for Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade
+ * the YK AwesomeSizingChart module to newer versions in the future.
+ * If you wish to customize the YK AwesomeSizingChart module for your needs
+ * please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   YK
+ * @package    YK_AwesomeSizingChart
+ * @copyright  Copyright (C) 2013 Yaroslav Kravchuk
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <YK_AwesomeSizingChart>
+            <version>0.1.0</version>
+        </YK_AwesomeSizingChart>
+    </modules>
+    <global>
+        <blocks>
+            <yk_asc>
+                <class>YK_AwesomeSizingChart_Block</class>
+            </yk_asc>
+        </blocks>
+        <models>
+            <yk_asc>
+                <class>YK_AwesomeSizingChart_Model</class>
+                <resourceModel>yk_asc_mysql4</resourceModel>
+            </yk_asc>
+            <yk_asc_mysql4>
+                <class>YK_AwesomeSizingChart_Model_Mysql4</class>
+                <entities>
+                    <chart>
+                        <table>yk_sizing_chart</table>
+                    </chart>
+                </entities>
+            </yk_asc_mysql4>
+        </models>
+        <resources>
+            <yk_awesomesizingchart_setup>
+                <setup>
+                    <module>YK_AwesomeSizingChart</module>
+                    <connection>core_setup</connection>
+                    <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+                </setup>
+            </yk_awesomesizingchart_setup>
+        </resources>
+        <helpers>
+            <yk_asc>
+                <class>YK_AwesomeSizingChart_Helper</class>
+            </yk_asc>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <YK_AwesomeSizingChart before="Mage_Adminhtml">YK_AwesomeSizingChart_Adminhtml</YK_AwesomeSizingChart>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <menu>
+            <cms>
+                <children>
+                    <manage_sizing_chart translate="title" module="yk_asc">
+                        <title>Sizing Charts</title>
+                        <action>adminhtml/chart</action>
+                    </manage_sizing_chart>
+                </children>
+            </cms>
+        </menu>
+        <layout>
+            <updates>
+                <yk_asc>
+                    <file>yk/sizing_chart.xml</file>
+                </yk_asc>
+            </updates>
+        </layout>
+    </adminhtml>
+    <frontend>
+        <layout>
+            <updates>
+                <yk_asc>
+                    <file>yk/sizing_chart.xml</file>
+                </yk_asc>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <yk_config>
+            <asc>
+                 <url><![CDATA[http://www.cafepress.com/cp/moredetails.aspx?productNo=-1&pr=F&showbleed=False&colorNo=-1&tab=3&subFront=&subBack=&ptn=]]></url>
+                 <container>div[id="moreDetailsContainer"]</container>
+            </asc>
+        </yk_config>
+    </default>
+</config>
